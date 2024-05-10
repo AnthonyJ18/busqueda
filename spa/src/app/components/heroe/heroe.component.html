@@ -1,0 +1,19 @@
+<h1>{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <br><br>
+        <a (click)="Regresar()" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        <div><img [src]="heroe.img" class="card-img-top" alt="..."></div>
+        <div *ngIf="heroe.casa=='DC';"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DC_Comics_logo.svg/640px-DC_Comics_logo.svg.png" class="card-img-top" alt="..." width="50px" ></div>
+        <div *ngIf="heroe.casa=='Marvel';"><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Marvel_Studios_logo.jpg" class="card-img-top" alt="..." width=100px></div>
+
+    </div>
+</div>
